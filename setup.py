@@ -1,5 +1,7 @@
 from setuptools import setup, Extension
-from decoder import __version__
+
+__version__ = '0.0.1'
+
 
 setup(
     name='binance-decoder',
@@ -11,6 +13,11 @@ setup(
     url='https://github.com/VachaganGrigoryan/binance-decoder',
 
     setup_requires=['setuptools-golang'],
-    ext_modules=[Extension('binance_decoder', ['decoder/binance_decoder.go'])],
+    extras_require={
+        'test': ['pytest'],
+    },
+    ext_modules=[
+        Extension('binance_decoder', ['decoder/binance_decoder.go']),
+    ],
     build_golang={'root': 'github.com/VachaganGrigoryan/binance-decoder'},
 )
