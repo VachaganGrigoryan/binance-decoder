@@ -3,7 +3,7 @@ module github.com/VachaganGrigoryan/binance-decoder
 go 1.19
 
 
-require github.com/binance-chain/go-sdk v1.2.6
+require github.com/bnb-chain/go-sdk latest
 
 require (
 	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
@@ -43,4 +43,14 @@ require (
 	golang.org/x/text v0.3.2 // indirect
 	google.golang.org/genproto v0.0.0-20181029155118-b69ba1387ce2 // indirect
 	google.golang.org/grpc v1.22.0 // indirect
+)
+
+replace (
+	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.26.3
+	github.com/tendermint/go-amino => github.com/bnb-chain/bnc-go-amino v0.14.1-binance.2
+	github.com/tendermint/iavl => github.com/bnb-chain/bnc-tendermint-iavl v0.12.0-binance.5
+	github.com/tendermint/tendermint => github.com/bnb-chain/bnc-tendermint v0.32.3-bc.10
+	github.com/zondax/ledger-cosmos-go => github.com/bnb-chain/ledger-cosmos-go v0.9.10-0.20230201065744-d644bede1667
+	github.com/zondax/ledger-go => github.com/bnb-chain/ledger-go v0.9.1
+	golang.org/x/crypto => github.com/tendermint/crypto v0.0.0-20190823183015-45b1026d81ae
 )

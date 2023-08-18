@@ -1,6 +1,6 @@
 from setuptools import setup, Extension
 
-__version__ = '0.0.1'
+__version__ = '0.0.4'
 
 
 setup(
