@@ -1,12 +1,18 @@
 from setuptools import setup, Extension
+from pathlib import Path
 
-__version__ = '0.0.4'
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
+__version__ = '0.0.5'
 
 
 setup(
     name='binance-decoder',
     version=__version__,
     description='Binance decoder',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
 
     author='Vachagan Grigoryan',
     author_email='vachagan.grigoryan@outlook.com',
